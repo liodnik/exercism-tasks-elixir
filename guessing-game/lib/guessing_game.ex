@@ -10,14 +10,14 @@ defmodule GuessingGame do
   end
 
   def compare(secret_number, guess) when secret_number - guess in [-1,1] do
-     	"So close"
+    "So close"
   end
 
   def compare(secret_number, guess) when secret_number > guess do
-     	"Too low"
+    "Too low"
   end
 
   def compare(secret_number, guess) when secret_number < guess do
-     	"Too high"
+    "Too high"
   end
 end
