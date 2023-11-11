@@ -30,7 +30,9 @@ defmodule KitchenCalculator do
   end
 
   def convert(volume_pair, new_unit) do
-    val = from_milliliter(to_milliliter(volume_pair), new_unit)
+    val =
+      to_milliliter(volume_pair)
+      |> from_milliliter(new_unit)
 
     {new_unit, elem(val, 1)}
   end
